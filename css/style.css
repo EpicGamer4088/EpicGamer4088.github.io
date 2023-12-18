@@ -8,42 +8,124 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #222;
+    color: #fff;
 }
 
+/* Header styles */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Add a thicker lighter stripe above and below the header */
+header::before,
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #00a1e4;
+    z-index: -1;
+}
+
+header::before {
+    top: 0;
+}
+
+header::after {
+    bottom: 0;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 nav ul {
     list-style: none;
+    text-align: center;
 }
 
 nav ul li {
     display: inline-block;
     margin-right: 20px;
+    font-size: 18px;
 }
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: #fff;
+    font-weight: bold;
 }
 
 /* Main section styles */
 section {
-    max-width: 800px;
+    max-width: 80%; /* Updated to 80% of the width */
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #333; /* Lighter color for the content area */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #f0f0f0; /* Adjusted text color */
+}
+
+/* Centering section headings */
+section h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Hier den gewünschten Abstand einfügen */
+}
+
+/* Farbe für den zusätzlichen Text anpassen */
+section .welcome-text {
+    text-align: center;
+    color: #aabbcc;
+}
+
+/* Project container styles */
+.project {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden; /* Clearfix for child floats */
+}
+
+.project h3 {
+    color: #fff;
+}
+
+.project p {
+    color: #88aabb;
+}
+
+/* Adjusted color for the "Learn more" link */
+.project a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.project a:hover {
+    background-color: #2980b9;
 }
 
 /* Project details styles */
 #project-details {
-    text-align: center;
+    text-align: left;
 }
 
 .project-description {
@@ -52,12 +134,13 @@ section {
 
 .project-links a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: #3498db;
     color: #fff;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
 .project-links a:hover {
@@ -67,9 +150,10 @@ section {
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #333;
     color: #fff;
+    border-top: 1px solid #555;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -77,8 +161,21 @@ footer {
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {
-    header nav ul li {
+    nav ul {
+        position: static;
+        transform: none;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    nav ul li {
         display: block;
         margin: 10px 0;
+        font-size: 16px;
+    }
+
+    header img {
+        width: 100px;
+        height: auto;
     }
 }
