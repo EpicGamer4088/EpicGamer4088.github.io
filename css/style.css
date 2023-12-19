@@ -60,6 +60,10 @@ nav ul li {
     font-size: 18px;
 }
 
+ul li ul {
+    padding-left: 20px;
+}
+
 a {
     text-decoration: none;
     color: #fff;
@@ -147,16 +151,18 @@ section .welcome-text {
     background-color: #2980b9;
 }
 
+
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #333;
     color: #fff;
     border-top: 1px solid #555;
-    position: fixed;
+    position: fixed; /* Fixieren Sie den Footer am unteren Bildschirmrand */
     width: 100%;
-    bottom: 0;
+    bottom: 0; /* Positionieren Sie den Footer am unteren Rand des Bildschirms */
+    z-index: 999; /* Stellen Sie sicher, dass der Footer über anderen Elementen liegt */
 }
 
 /* Responsive styles */
@@ -177,5 +183,15 @@ footer {
     header img {
         width: 100px;
         height: auto;
+    }
+
+    /* Additional styles for small screens */
+    footer {
+        position: relative; /* Ändern Sie die Position zurück, um normales Scrollverhalten zu ermöglichen */
+        width: auto;
+    }
+
+    section:last-child {
+        margin-bottom: 60px; /* Passen Sie den Wert nach Bedarf an */
     }
 }
