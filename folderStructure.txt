@@ -1,0 +1,49 @@
+/EpicGamer4088.github.io
+│
+├── index.html
+│
+├── portfolio
+│   ├── index.html
+│   ├── songlister.html
+│   ├── tic-tac-toe.html
+│   ├── superfranz.html
+│
+├── projects
+│   ├── songlister
+│   │   ├── code.html
+│   │   ├── README.md
+│   │   └── js
+│   │       └── main.js
+│   │
+│   ├── tic-tac-toe
+│   │   ├── code.html
+│   │   ├── README.md
+│   │   └── js
+│   │       └── main.js
+│   │
+│   ├── superfranz
+│   │   ├── code.html
+│   │   ├── README.md
+│   │   └── js
+│   │       └── main.js 
+│
+├── about.html
+│
+├── projects.html
+│
+├── contact.html
+│
+├── forms
+│   ├── thank_you.html  <!-- Hinzugefügt -->
+│   └── error_page.html <!-- Hinzugefügt -->
+│
+├── imprint.html
+│
+├── php
+│   └── form_process.php
+│
+├── css
+│   └── styles.css
+│
+└── js
+    └── common.js
