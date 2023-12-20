@@ -9,14 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($name) || empty($email) || empty($message)) {
         // Mindestens eines der Pflichtfelder ist leer
-        header("Location: error_page.html"); // Oder eine Fehlerseite
+        header("Location: ../forms/error_page.html"); // Oder eine Fehlerseite
         exit();
     }
 
     // Überprüfen, ob die E-Mail-Adresse das @-Symbol enthält
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Die E-Mail-Adresse ist ungültig
-        header("Location: error_page.html"); // Oder eine Fehlerseite für ungültige E-Mail-Adresse
+        header("Location: ../forms/error_page.html"); // Oder eine Fehlerseite für ungültige E-Mail-Adresse
         exit();
     }
 
@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Weitere Aktionen können hier hinzugefügt werden.
 
-    header("Location: thank_you.html"); // Oder eine andere Weiterleitung
+    header("Location: ../forms/thank_you.html"); // Oder eine andere Weiterleitung
 } else {
-    header("Location: error_page.html"); // Oder eine Fehlerseite
+    header("Location: ../forms/error_page.html"); // Oder eine Fehlerseite
 }
 
 ?>
