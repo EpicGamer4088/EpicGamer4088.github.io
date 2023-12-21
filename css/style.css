@@ -12,12 +12,19 @@ body {
     color: #fff;
 }
 
-/* Header styles */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
     padding: 20px;
     text-align: center;
     position: relative;
+}
+
+header .header-login {
+    float: right;
+    margin-right: 20px; /* Adjust spacing as needed */
 }
 
 /* Add a thicker lighter stripe above and below the header */
@@ -204,6 +211,85 @@ button:hover {
     background-color: #2980b9;
 }
 
+#register-section {
+    display: flex;
+    flex-direction: column; /* Änderung zu Spaltenlayout */
+}
+
+#register-section label,
+#register-section input {
+    margin-bottom: 10px;
+}
+
+#register-section label {
+    flex: 1;
+}
+
+#register-section input[type="radio"] {
+    margin-right: 5px;
+}
+
+#register-section input[type="date"] {
+    flex: 0 0 48%;
+    max-width: 200px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column; /* Änderung zu Spaltenlayout */
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Abstand zwischen den Optionen und dem Text */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px; /* Abstand zwischen den Radio-Buttons und dem Text */
+}
+
+.radio-group input[type="radio"]:last-child {
+    margin-right: 0; /* Kein Abstand für das letzte Radio-Element */
+}
+
+.radio-group input[type="radio"] + label {
+    margin-bottom: 5px; /* Abstand zwischen den Optionen und dem Text */
+}
+
+.name-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.name-group .input-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.account-info-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.account-info-group .input-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
 /* Footer styles */
 footer {

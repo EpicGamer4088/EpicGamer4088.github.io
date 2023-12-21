@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Franz | Tim Platzer</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
 <header>
-    <a href="./index.html">
+    <a href="../index.html">
         <img src="../img/logo.png" alt="Logo">
     </a>
     <nav>
@@ -27,16 +27,18 @@
     </div>
 </header>
 
-<section id="project-details">
-    <h2>Super Franz Unity Game</h2>
+<section id="login-section">
+    <h2>Login</h2>
+    <form id="login-form" action="../php/login.php" method="post">
+        <label for="login-username-email">Username or Email:</label>
+        <input type="text" id="login-username-email" name="login-username-email" required>
 
-    <div class="project-description">
-        <p>Longer description of the Super Franz project.</p>
-    </div>
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required>
 
-    <div class="project-links">
-        <a href="../projects/superfranz/code.html">View Source Code</a>
-    </div>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="../forms/register.html">Register here</a></p>
 </section>
 
 <footer>

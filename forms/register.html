@@ -1,0 +1,86 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+  <a href="../index.html">
+    <img src="../img/logo.png" alt="Logo">
+  </a>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../portfolio/index.html">Portfolio</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.php">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-login">
+    <a href="../forms/login.html">Login</a>
+  </div>
+</header>
+
+<section id="register-section">
+  <h2>Register</h2>
+  <form id="register-form" action="../php/register.php" method="post">
+    <div class="radio-group">
+      <input type="radio" id="gender-male" name="register-gender" value="male">
+      <label for="gender-male">Male</label>
+
+      <input type="radio" id="gender-female" name="register-gender" value="female">
+      <label for="gender-female">Female</label>
+
+      <input type="radio" id="gender-divers" name="register-gender" value="divers">
+      <label for="gender-divers">Divers</label>
+    </div>
+
+    <div class="name-group">
+      <div class="input-group">
+        <label for="register-firstname">First Name:</label>
+        <input type="text" id="register-firstname" name="register-firstname" required>
+      </div>
+
+      <div class="input-group">
+        <label for="register-lastname">Last Name:</label>
+        <input type="text" id="register-lastname" name="register-lastname">
+      </div>
+    </div>
+
+    <div class="account-info-group">
+      <div class="input-group">
+        <label for="register-username">Username:</label>
+        <input type="text" id="register-username" name="register-username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" name="register-email" required>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="register-birthdate">Birthdate:</label>
+      <input type="date" id="register-birthdate" name="register-birthdate">
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</section>
+
+<footer>
+  <p><a href="../imprint.html">Impressum</a></p>
+  <p>&copy; 2023 Tim Platzer. All rights reserved.</p>
+</footer>
+
+<script src="../js/common.js"></script>
+</body>
+
+</html>
