@@ -213,7 +213,10 @@ button:hover {
 
 #register-section {
     display: flex;
-    flex-direction: column; /* Änderung zu Spaltenlayout */
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    width: 100%;
 }
 
 #register-section label,
@@ -227,35 +230,26 @@ button:hover {
 
 #register-section input[type="radio"] {
     margin-right: 5px;
+    flex: 1;
 }
 
 #register-section input[type="date"] {
     flex: 0 0 48%;
     max-width: 200px;
+    margin-bottom: 20px;
 }
 
 .radio-group {
     display: flex;
-    flex-direction: column; /* Änderung zu Spaltenlayout */
+    flex-direction: row; /* Änderung zu Reihenlayout */
     margin-bottom: 20px;
+    align-items: center; /* Elemente zentriert vertikal ausrichten */
 }
 
 .radio-group label {
     display: flex;
     align-items: center;
-    margin-bottom: 5px; /* Abstand zwischen den Optionen und dem Text */
-}
-
-.radio-group input[type="radio"] {
-    margin-right: 5px; /* Abstand zwischen den Radio-Buttons und dem Text */
-}
-
-.radio-group input[type="radio"]:last-child {
-    margin-right: 0; /* Kein Abstand für das letzte Radio-Element */
-}
-
-.radio-group input[type="radio"] + label {
-    margin-bottom: 5px; /* Abstand zwischen den Optionen und dem Text */
+    margin-right: 20px; /* Abstand zwischen Radio-Button und Text */
 }
 
 .name-group {
@@ -284,7 +278,8 @@ button:hover {
 }
 
 .input-group input {
-    width: calc(100% - 20px);
+    /*width: calc(100% - 20px);*/
+    width: 273px;
     padding: 10px;
     border: 1px solid #666;
     border-radius: 5px;

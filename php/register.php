@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hier werden nur die eingegebenen Daten verarbeitet.
 
     // Weiterleitung nach erfolgreicher Registrierung
-    header("Location: ./login.html");
+    header("Location: ../forms/login.html");
     exit();
 }
 ?>
